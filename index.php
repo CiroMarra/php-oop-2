@@ -24,6 +24,7 @@ require_once __DIR__ . '/Models/Cat.php';
                     <p class="card-text"> <strong>Descrizione: </strong>  <?php echo $dog->description; ?> </p>        
                     <p class="card-text"><strong>Prezzo:</strong> <?php echo $dog->price; ?></p>
                     <p class="card-text"><strong>Colore:</strong> <?php echo $dog->color; ?></p>
+                    <p class="card-text text-danger"><strong><?php echo $dog->category; ?></strong></p>
                 </div>
             </div>
         <?php } ?>
@@ -34,10 +35,11 @@ require_once __DIR__ . '/Models/Cat.php';
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $cat->article; ?></h5>
                     <img src="<?php echo $cat->image; ?>">
-                    <h6 class="card-text text-danger">Marca: <?php echo $cat->breed; ?></h6>     
+                    <h6 class="card-text"><strong>Marca:</strong> <?php echo $cat->breed; ?></h6>     
                     <p class="card-text"> <strong>Descrizione: </strong>  <?php echo $cat->description; ?> </p>        
                     <p class="card-text"><strong>Prezzo:</strong> <?php echo $cat->price; ?></p>
                     <p class="card-text"><strong>Colore:</strong> <?php echo $cat->color; ?></p>
+                    <p class="card-text text-danger"><strong><?php echo $cat->category; ?></strong></p>
                 </div>
             </div>
         <?php } ?>
