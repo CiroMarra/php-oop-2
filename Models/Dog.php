@@ -1,17 +1,22 @@
 <?php
-class Dog {
+require_once 'Product.php';
+
+class Dog extends Product {
     public $article;
     public $breed;
     public $description;
     public $color;
     public $price;
 
-    public function __construct($_article, $_breed, $_description, $_color, $_price) {
-        $this->article = $_article;
-        $this->breed = $_breed;
-        $this->description = $_description;
-        $this->color = $_color;
-        $this->price =$_price;
-    }
+    
+
 }
+
+$dog_articles = [
+    new Dog('Collare Extra Luxory', 'DogCode#122', 'Descrizione Oggetto Bellissimo Per Cani', 'Rosso', '10.52 E', './img/collare.png'),
+    new Dog('Cuscino Extra Comodo', 'DogCode#122', 'Descrizione cuccia per cani', 'Grigia','52.99 E', './img/cuscino.png'),
+    new Dog('Masticabile aromatizzato al Manzo di Kobe ricetta di Antogattino Canevacciulo', 'DogCode#122', 'Descrizione masticabile per cani', 'Giallo', '9.99 E','./img/masticabile.png')
+];
+
+
 ?>
