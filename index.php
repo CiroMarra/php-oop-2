@@ -36,6 +36,7 @@ $dog_articles = [
                 </div>
             </div>
         <?php } ?>
+        
 
     </div>
 </body>
