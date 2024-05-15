@@ -11,7 +11,11 @@ $dog_articles = [
     new Dog('Masticabile aromatizzato al Manzo di Kobe ricetta di Antogattino Canevacciulo', 'DogCode#122', 'Descrizione masticabile per cani', 'Giallo', '9.99 E')
 ];
 
-
+$cat_articles = [
+    new Cat('Collare Extra Luxory con campanellino', 'CatgCode#122', 'Descrizione Oggetto Bellissimo Per Gatti', 'Rosa', '10.52 E'),
+    new Cat('Tiragraffi a forma di scatola', 'CatCode#122', 'Descrizione tiragraffi per gatti', 'Lavanda','71.99 E'),
+    new Cat('Gomitolo di lana per gatti Pulce&Gattana', 'CatCode#122', 'Descrizione gomitolo giocattolo per gatti', 'Blu', '19.99 E')
+]
 ?>
 
 <!DOCTYPE html>
@@ -36,8 +40,19 @@ $dog_articles = [
                 </div>
             </div>
         <?php } ?>
-        
 
+        <h2>Articoli per  gatti:</h2>
+        <?php foreach($cat_articles as $cat) { ?>
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo $cat->article; ?></h5>
+                    <h6 class="card-text text-danger">Marca: <?php echo $cat->breed; ?></h6>     
+                    <p class="card-text"> <strong>Descrizione: </strong>  <?php echo $cat->description; ?> </p>        
+                    <p class="card-text"><strong>Prezzo:</strong> <?php echo $cat->price; ?></p>
+                    <p class="card-text"><strong>Colore:</strong> <?php echo $cat->color; ?></p>
+                </div>
+            </div>
+        <?php } ?>
     </div>
 </body>
 </html>
