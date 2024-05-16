@@ -3,6 +3,8 @@ require_once __DIR__ . '/Models/Dog.php';
 require_once __DIR__ . '/Models/Cat.php'; 
 require_once __DIR__ . '/Models/db.php';
 
+var_dump($cat_articles);
+
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +17,7 @@ require_once __DIR__ . '/Models/db.php';
 </head>
 <body>
     <div class="container">
-        <h2>Articoli per  cani:</h2>
+        <h2>Articoli per cani:</h2>
         <?php foreach($dog_articles as $dog) { ?>
             <div class="card mt-3">
                 <div class="card-body">
@@ -24,13 +26,13 @@ require_once __DIR__ . '/Models/db.php';
                     <h6 class="card-text text-danger">Marca: <?php echo $dog->breed; ?></h6>     
                     <p class="card-text"> <strong>Descrizione: </strong>  <?php echo $dog->description; ?> </p>        
                     <p class="card-text"><strong>Prezzo:</strong> <?php echo $dog->price; ?></p>
-                    <p class="card-text"><strong>Colore:</strong> <?php echo $dog->color; ?></p>
+                    <p class="card-text"><strong>Colore:</strong> <?php echo $dog->getColor(); ?></p> 
                     <p class="card-text text-danger"><strong><?php echo $dog->category; ?></strong></p>
                 </div>
             </div>
         <?php } ?>
 
-        <h2>Articoli per  gatti:</h2>
+        <h2>Articoli per gatti:</h2>
         <?php foreach($cat_articles as $cat) { ?>
             <div class="card mt-3">
                 <div class="card-body">
@@ -39,7 +41,7 @@ require_once __DIR__ . '/Models/db.php';
                     <h6 class="card-text"><strong>Marca:</strong> <?php echo $cat->breed; ?></h6>     
                     <p class="card-text"> <strong>Descrizione: </strong>  <?php echo $cat->description; ?> </p>        
                     <p class="card-text"><strong>Prezzo:</strong> <?php echo $cat->price; ?></p>
-                    <p class="card-text"><strong>Colore:</strong> <?php echo $cat->color; ?></p>
+                    <p class="card-text"><strong>Colore:</strong> <?php echo $cat->getColor(); ?></p> 
                     <p class="card-text text-danger"><strong><?php echo $cat->category; ?></strong></p>
                 </div>
             </div>
