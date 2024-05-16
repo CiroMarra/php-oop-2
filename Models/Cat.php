@@ -12,9 +12,5 @@ class Cat extends Product {
 
 }
 
-$cat_articles = [
-    new Cat('Collare Extra Luxory con campanellino', 'CatgCode#122', ' Oggetto Bellissimo Per Gatti', 'Rosa', '10.52 E', './img/cat_collar.png','articolo per gatti'),
-    new Cat('Tiragraffi a forma di scatola', 'CatCode#122', 'tiragraffi per gatti', 'Lavanda','71.99 E', './img/graffi.png', 'articolo per gatti'),
-    new Cat('Gomitolo di lana per gatti Pulce&Gattana', 'CatCode#122', 'gomitolo giocattolo per gatti', 'Blu', '19.99 E','./img/lana.png','articolo per gatti')
-]
+
 ?>

@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/Models/Dog.php'; 
 require_once __DIR__ . '/Models/Cat.php'; 
+require_once __DIR__ . '/Models/db.php';
 
 ?>
 
